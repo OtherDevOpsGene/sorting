@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
@@ -33,4 +34,7 @@ public class WordService {
     Collections.shuffle(words);
     return words;
   }
+
+  @CacheEvict(value = "words", allEntries = true)
+  public void delete() {}
 }
