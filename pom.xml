@@ -38,6 +38,7 @@
     <spring.boot.version>2.2.0.RELEASE</spring.boot.version>
 
     <junit.jupiter.version>5.5.2</junit.jupiter.version>
+    <jmeter.maven.plugin.version>2.9.0</jmeter.maven.plugin.version>
   </properties>
 
   <build>
@@ -117,6 +118,11 @@
           <artifactId>spring-boot-maven-plugin</artifactId>
           <version>${spring.boot.version}</version>
         </plugin>
+        <plugin>
+          <groupId>com.lazerycode.jmeter</groupId>
+          <artifactId>jmeter-maven-plugin</artifactId>
+          <version>${jmeter.maven.plugin.version}</version>
+        </plugin>
       </plugins>
     </pluginManagement>
     <plugins>
@@ -159,6 +165,18 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>com.lazerycode.jmeter</groupId>
+        <artifactId>jmeter-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>jmeter-tests</id>
+            <goals>
+              <goal>jmeter</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
