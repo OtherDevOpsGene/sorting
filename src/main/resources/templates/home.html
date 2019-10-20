@@ -6,9 +6,17 @@
   <body>
     <h1>Sorting Example</h1>
 
-    <p>This app just sorts a list of words.</p>
+    <p>This app just sorts a long list of words using various algorithms.</p>
 
-    <p>Click <a th:href="@{/words}">here</a> to see the list of words in random order.</p>
+    <ul>
+      <li><a th:href="@{/words}">Unsorted</a></li>
+      <li><a th:href="@{/words?sort=bubble}">Bubble sort</a> - O(n^2)</li>
+      <li><a th:href="@{/words?sort=insertion}">Insertion sort</a> - O(n*2)</li>
+      <li><a th:href="@{/words?sort=merge}">Merge sort</a> - O(n log n)</li>
+      <li><a th:href="@{/words?sort=heap}">Heap sort</a> - O(n log n)</li>
+      <li><a th:href="@{/words?sort=quick}">Quick sort</a> - O(n log n)</li>
+      <li><a th:href="@{/words?sort=java}">Java sort</a> - O(n log n)</li>
+    </ul>
 
   </body>
 </html>
