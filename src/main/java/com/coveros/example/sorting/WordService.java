@@ -25,17 +25,22 @@ public class WordService {
 
   @Cacheable("words")
   public List<String> words() throws IOException {
-    try (InputStream wordInput = wordFile.getInputStream();
-        InputStreamReader reader = new InputStreamReader(wordInput, UTF_8);
+    try (InputStream wordInput = wordFile.getInputStream();) {
+      List<String> words = readWordsFromStream(wordInput);
+      Collections.shuffle(words);
+      return words;
+    }
+  }
+
+  List<String> readWordsFromStream(InputStream wordInput) throws IOException {
+    List<String> words = new ArrayList<>();
+    try (InputStreamReader reader = new InputStreamReader(wordInput, UTF_8);
         BufferedReader br = new BufferedReader(reader);) {
 
-      List<String> words = new ArrayList<>();
       String word;
       while (null != (word = br.readLine())) {
         words.add(word);
       }
-
-      Collections.shuffle(words);
       return words;
     }
   }
