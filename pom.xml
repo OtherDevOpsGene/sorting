@@ -291,12 +291,12 @@
 
   <issueManagement>
     <system>GitHub</system>
-    <url>https://github.com/gotimer/sorting/issues</url>
+    <url>https://github.com/Coveros/sorting/issues</url>
   </issueManagement>
   <scm>
-    <connection>scm:git:https://github.com/gotimer/sorting.git</connection>
-    <developerConnection>scm:git:git@github.com:gotimer/sorting.git</developerConnection>
-    <url>https://github.com/gotimer/sorting</url>
+    <connection>scm:git:https://github.com/Coveros/sorting.git</connection>
+    <developerConnection>scm:git:git@github.com:Coveros/sorting.git</developerConnection>
+    <url>https://github.com/Coveros/sorting</url>
   </scm>
 
 </project>
