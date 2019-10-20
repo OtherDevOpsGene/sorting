@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -16,23 +18,26 @@ import org.springframework.stereotype.Service;
 @Service
 public class WordService {
 
+  public static final Charset UTF_8 = StandardCharsets.UTF_8;
+
   @Value("classpath:words-20000.txt")
   private Resource wordFile;
 
   @Cacheable("words")
   public List<String> words() throws IOException {
-    InputStream wordInput = wordFile.getInputStream();
+    try (InputStream wordInput = wordFile.getInputStream();
+        InputStreamReader reader = new InputStreamReader(wordInput, UTF_8);
+        BufferedReader br = new BufferedReader(reader);) {
 
-    BufferedReader br = new BufferedReader(new InputStreamReader(wordInput));
+      List<String> words = new ArrayList<>();
+      String word;
+      while (null != (word = br.readLine())) {
+        words.add(word);
+      }
 
-    List<String> words = new ArrayList<>();
-    String word;
-    while (null != (word = br.readLine())) {
-      words.add(word);
+      Collections.shuffle(words);
+      return words;
     }
-
-    Collections.shuffle(words);
-    return words;
   }
 
   @CacheEvict(value = "words", allEntries = true)
