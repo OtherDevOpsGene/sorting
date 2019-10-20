@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class WordService {
 
-  @Value("classpath:picturable-words.txt")
+  @Value("classpath:words-20000.txt")
   private Resource wordFile;
 
   @Cacheable("words")
