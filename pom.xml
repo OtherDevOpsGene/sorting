@@ -232,8 +232,8 @@
     <url>https://github.com/gotimer/sorting/issues</url>
   </issueManagement>
   <scm>
-    <connection>scm:git:git@github.com:gotimer/sorting.git</connection>
-    <developerConnection>scm:git:https://github.com/gotimer/sorting.git</developerConnection>
+    <connection>scm:git:https://github.com/gotimer/sorting.git</connection>
+    <developerConnection>scm:git:git@github.com:gotimer/sorting.git</developerConnection>
     <url>https://github.com/gotimer/sorting</url>
   </scm>
 
