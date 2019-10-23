@@ -2,6 +2,8 @@
 
 This app just sorts a long list of words using various algorithms.
 
+The accompanying slides are at `https://speakerdeck.com/gotimer/how-fast-is-my-app-performance-testing-101`.
+
 ## Running the application
 
 `mvn spring-boot:run`
