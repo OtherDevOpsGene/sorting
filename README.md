@@ -2,7 +2,7 @@
 
 This app just sorts a long list of words using various algorithms.
 
-The accompanying slides are at `https://speakerdeck.com/gotimer/how-fast-is-my-app-performance-testing-101`.
+The accompanying slides are at https://speakerdeck.com/gotimer/how-fast-is-my-app-performance-testing-101.
 
 ## Running the application
 
@@ -11,7 +11,7 @@ The accompanying slides are at `https://speakerdeck.com/gotimer/how-fast-is-my-a
 
 ## Gatling
 
-[https://gatling.io]
+https://gatling.io
 
 The source code for the simulation is in `src/test/scala/com/coveros/example/simluation/RecordedSimulation.scala`.
 
@@ -28,7 +28,7 @@ Report will be listed at the end of the output, in `target/gatling/reports/sorti
 
 ## Apache JMeter
 
-[https://jmeter.apache.org]
+https://jmeter.apache.org
 
 ### Running the JMeter UI
 
