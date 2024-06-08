@@ -2,7 +2,6 @@
 
 This app just sorts a long list of words using various algorithms.
 
-The accompanying slides are at https://speakerdeck.com/gotimer/how-fast-is-my-app-performance-testing-101.
 
 ## Running the application
 
@@ -13,7 +12,7 @@ The accompanying slides are at https://speakerdeck.com/gotimer/how-fast-is-my-ap
 
 https://gatling.io
 
-The source code for the simulation is in `src/test/scala/com/coveros/example/simluation/RecordedSimulation.scala`.
+The source code for the simulation is in `src/test/scala/dev/otherdevopsgene/example/simluation/RecordedSimulation.scala`.
 
 ### Running the Gatling UI
 
@@ -32,7 +31,7 @@ https://jmeter.apache.org
 
 ### Running the JMeter UI
 
-`apache-jmeter-5.1.1\bin\jmeterw.cmd`
+`apache-jmeter-5.6.3\bin\jmeterw.cmd`
 
 ### Running the JMeter tests
 
@@ -43,5 +42,5 @@ Report will be in `target/jmeter/reports/sorting/index.html`
 
 ## Unit Performance Tests
 
-The unit test class that measures performance is in `src/test/java/com/coveros/example/sorting/SortingServicePerfTest.java`
+The unit test class that measures performance is in `src/test/java/dev/otherdevopsgene/example/sorting/SortingServicePerfTest.java`
 

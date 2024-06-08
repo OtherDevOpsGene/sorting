@@ -17,3 +17,6 @@ dependency-reduced-pom.xml
 *.iml
 .idea/
 out/
+
+# VSCode
+.vscode/
