@@ -13,7 +13,7 @@ This app just sorts a long list of words using various algorithms.
 https://gatling.io
 
 The source code for the simulation is in
-`src/test/scala/dev/otherdevopsgene/example/simluation/RecordedSimulation.scala`. 
+`src/test/scala/dev/otherdevopsgene/example/simluation/SortingSimulation.scala`. 
 
 ### Running the Gatling UI
 
@@ -27,7 +27,7 @@ In another window, run the Gatling tests with `mvn gatling:test`. They take
 about 3 minutes to run.
 
 Report will be listed at the end of the output, in
-`target/gatling/reports/sorting/recordedsimulation-xxxx/index.html`. 
+`target/gatling/reports/sorting/sortingsimulation-xxxx/index.html`. 
 
 
 ## Apache JMeter
