@@ -12,7 +12,8 @@ This app just sorts a long list of words using various algorithms.
 
 https://gatling.io
 
-The source code for the simulation is in `src/test/scala/dev/otherdevopsgene/example/simluation/RecordedSimulation.scala`.
+The source code for the simulation is in
+`src/test/scala/dev/otherdevopsgene/example/simluation/RecordedSimulation.scala`. 
 
 ### Running the Gatling UI
 
@@ -20,9 +21,13 @@ The source code for the simulation is in `src/test/scala/dev/otherdevopsgene/exa
 
 ### Running the Gatling tests
 
-`mvn gatling:test`
+Start the application in one window (`mvn spring-boot:run`).
 
-Report will be listed at the end of the output, in `target/gatling/reports/sorting/recordedsimulation-xxxx/index.html`
+In another window, run the Gatling tests with `mvn gatling:test`. They take
+about 3 minutes to run.
+
+Report will be listed at the end of the output, in
+`target/gatling/reports/sorting/recordedsimulation-xxxx/index.html`. 
 
 
 ## Apache JMeter
@@ -31,16 +36,21 @@ https://jmeter.apache.org
 
 ### Running the JMeter UI
 
-`apache-jmeter-5.6.3\bin\jmeterw.cmd`
+`mvn jmeter:configure jmeter:gui`
 
 ### Running the JMeter tests
 
-`mvn jmeter:jmeter`
+Start the application in one window (`mvn spring-boot:run`).
+
+In another window, run the JMeter tests with `mvn jmeter:jmeter`. They take
+about 2 minutes to run.
 
 Report will be in `target/jmeter/reports/sorting/index.html`
 
 
 ## Unit Performance Tests
 
-The unit test class that measures performance is in `src/test/java/dev/otherdevopsgene/example/sorting/SortingServicePerfTest.java`
+The unit test class that measures performance is in
+`src/test/java/dev/otherdevopsgene/example/sorting/SortingServicePerfTest.java`.
 
+The tests are run with `mvn install`. They take about a minute to run.

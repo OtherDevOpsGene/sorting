@@ -1,4 +1,4 @@
-package dev.otherdevopsgene.example.sorting.simluation
+package dev.otherdevopsgene.example.sorting.simulation
 
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
@@ -7,7 +7,6 @@ class RecordedSimulation extends Simulation {
 
   val httpProtocol = http
     .baseUrl("http://localhost:8080")
-    .inferHtmlResources(BlackList(""".*\.css""", """.*\.js""", """.*\.ico"""), WhiteList())
     .acceptHeader("text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8")
     .acceptEncodingHeader("gzip, deflate")
     .acceptLanguageHeader("en-US,en;q=0.5")

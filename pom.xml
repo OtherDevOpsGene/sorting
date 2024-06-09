@@ -44,6 +44,7 @@
     <jmeter.maven.plugin.version>3.8.0</jmeter.maven.plugin.version>
     <gatling.charts.highcharts.version>3.11.3</gatling.charts.highcharts.version>
     <gatling.maven.plugin.version>4.9.4</gatling.maven.plugin.version>
+    <scala.maven.plugin.version>4.9.1</scala.maven.plugin.version>
   </properties>
 
   <build>
@@ -123,8 +124,14 @@
           <artifactId>gatling-maven-plugin</artifactId>
           <version>${gatling.maven.plugin.version}</version>
         </plugin>
+        <plugin>
+          <groupId>net.alchim31.maven</groupId>
+          <artifactId>scala-maven-plugin</artifactId>
+          <version>${scala.maven.plugin.version}</version>
+        </plugin>
       </plugins>
     </pluginManagement>
+
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -191,7 +198,34 @@
       <plugin>
         <groupId>io.gatling</groupId>
         <artifactId>gatling-maven-plugin</artifactId>
+        <configuration>
+          <simulationClass>dev.otherdevopsgene.example.sorting.simulation.RecordedSimulation</simulationClass>
+        </configuration>
       </plugin>
+      <plugin>
+        <groupId>net.alchim31.maven</groupId>
+        <artifactId>scala-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>testCompile</goal>
+            </goals>
+            <configuration>
+              <jvmArgs>
+                <jvmArg>-Xss100M</jvmArg>
+              </jvmArgs>
+              <args>
+                <arg>-deprecation</arg>
+                <arg>-feature</arg>
+                <arg>-unchecked</arg>
+                <arg>-language:implicitConversions</arg>
+                <arg>-language:postfixOps</arg>
+              </args>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
     </plugins>
   </build>
 
@@ -271,26 +305,22 @@
       <distribution>manual</distribution>
     </license>
   </licenses>
-  <organization>
-    <name>Coveros</name>
-    <url>https://www.coveros.com/</url>
-  </organization>
   <developers>
     <developer>
       <id>ggotimer</id>
       <name>Gene Gotimer</name>
-      <email>gene.gotimer@coveros.com</email>
+      <email>gene@otherdevopsgene.com</email>
     </developer>
   </developers>
 
   <issueManagement>
     <system>GitHub</system>
-    <url>https://github.com/Coveros/sorting/issues</url>
+    <url>https://github.com/OtherDevOpsGene/sorting/issues</url>
   </issueManagement>
   <scm>
-    <connection>scm:git:https://github.com/Coveros/sorting.git</connection>
-    <developerConnection>scm:git:git@github.com:Coveros/sorting.git</developerConnection>
-    <url>https://github.com/Coveros/sorting</url>
+    <connection>scm:git:https://github.com/OtherDevOpsGene/sorting.git</connection>
+    <developerConnection>scm:git:git@github.com:OtherDevOpsGene/sorting.git</developerConnection>
+    <url>https://github.com/OtherDevOpsGene/sorting</url>
   </scm>
 
 </project>
