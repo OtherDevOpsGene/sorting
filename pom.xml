@@ -199,7 +199,7 @@
         <groupId>io.gatling</groupId>
         <artifactId>gatling-maven-plugin</artifactId>
         <configuration>
-          <simulationClass>dev.otherdevopsgene.example.sorting.simulation.RecordedSimulation</simulationClass>
+          <simulationClass>dev.otherdevopsgene.example.sorting.simulation.SortingSimulation</simulationClass>
         </configuration>
       </plugin>
       <plugin>
