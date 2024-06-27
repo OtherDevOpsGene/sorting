@@ -2,6 +2,13 @@
 
 This app just sorts a long list of words using various algorithms.
 
+Accompanying slides are at
+https://www.slideshare.net/slideshow/how-fast-is-my-app-performance-testing-101/269932100. 
+
+## Building the application
+
+`mvn compile`
+
 
 ## Running the application
 
